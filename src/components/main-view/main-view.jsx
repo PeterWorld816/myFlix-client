@@ -10,7 +10,7 @@ export default function MainView() {
       _id: '1',
       Title: 'Parasite',
       Description: 'Greed and class discrimination…',
-      ImagePath: 'https://m.media-amazon.com/images/I/71cXr3trkIL._AC_UF894,1000_QL80_.jpg',
+      ImagePath: 'https://i.ytimg.com/vi/isOGD_7hNIY/maxresdefault.jpg',
       Genre: { Name: 'Thriller' },
       Director: { Name: 'Bong Joon-ho', Bio: 'South-Korean director …' }
     },
@@ -18,7 +18,7 @@ export default function MainView() {
       _id: '2',
       Title: 'Snowpiercer',
       Description: 'A train circles the frozen Earth…',
-      ImagePath: 'https://m.media-amazon.com/images/I/81X1+P0JQ5L._AC_SY741_.jpg',
+      ImagePath: 'https://dyn.media.titanbooks.com/Y8pSRAuu6GvGel8YSQv-A_TKcOI=/fit-in/600x600/filters:format(webp)/https://media.titanbooks.com/catalog/products/Snowpiercer.jpg',
       Genre: { Name: 'Sci-Fi' },
       Director: { Name: 'Bong Joon-ho', Bio: 'South-Korean director …' }
     },
@@ -26,7 +26,7 @@ export default function MainView() {
       _id: '3',
       Title: 'Oldboy',
       Description: 'A man is kidnapped and imprisoned…',
-      ImagePath: 'https://m.media-amazon.com/images/I/51G1E9K9D9L._AC_.jpg',
+      ImagePath: 'https://snworksceo.imgix.net/dtc/9d1eb32c-94dd-4d2a-a7db-8448e144c8f4.sized-1000x1000.jpg?w=1000',
       Genre: { Name: 'Neo-Noir' },
       Director: { Name: 'Park Chan-wook', Bio: 'South-Korean director …' }
     }
