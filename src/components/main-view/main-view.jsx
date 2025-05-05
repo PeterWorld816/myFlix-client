@@ -5,32 +5,24 @@ import MovieView from '../movie-view/movie-view.jsx';
 
 export default function MainView() {
   // 1 ≥ requirement: at least 3 movies
-  const [movies] = useState([
-    {
-      _id: '1',
-      Title: 'Parasite',
-      Description: 'Greed and class discrimination…',
-      ImagePath: 'https://i.ytimg.com/vi/isOGD_7hNIY/maxresdefault.jpg',
-      Genre: { Name: 'Thriller' },
-      Director: { Name: 'Bong Joon-ho', Bio: 'South-Korean director …' }
-    },
-    {
-      _id: '2',
-      Title: 'Snowpiercer',
-      Description: 'A train circles the frozen Earth…',
-      ImagePath: 'https://dyn.media.titanbooks.com/Y8pSRAuu6GvGel8YSQv-A_TKcOI=/fit-in/600x600/filters:format(webp)/https://media.titanbooks.com/catalog/products/Snowpiercer.jpg',
-      Genre: { Name: 'Sci-Fi' },
-      Director: { Name: 'Bong Joon-ho', Bio: 'South-Korean director …' }
-    },
-    {
-      _id: '3',
-      Title: 'Oldboy',
-      Description: 'A man is kidnapped and imprisoned…',
-      ImagePath: 'https://snworksceo.imgix.net/dtc/9d1eb32c-94dd-4d2a-a7db-8448e144c8f4.sized-1000x1000.jpg?w=1000',
-      Genre: { Name: 'Neo-Noir' },
-      Director: { Name: 'Park Chan-wook', Bio: 'South-Korean director …' }
-    }
-  ]);
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    fetch("https://openlibrary.org/search.json?q=the+lord+of+the+rings")
+      .then((response) => response.json())
+      .then((data) => {
+        const moviesFromApi = data.docs.map((doc) => {
+          return {
+            id: doc.key,
+            title: doc.title,
+            image:`https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg`,
+            author: doc.author_name?.[0]
+          };
+        });
+
+        setMovies(moviesFromApi);
+      });
+  }, []);
 
   const [selectedMovie, setSelectedMovie] = useState(null);
 
