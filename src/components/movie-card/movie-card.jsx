@@ -3,16 +3,21 @@ import React from 'react';
 // Here you import the PropTypes library
 import PropTypes from "prop-types";
 
+
 // The BookCard function component 
 export const MovieCard = ({ movie, onMovieClick }) => {
+  console.log(movie);
   return (
-    <div
-      onClick={() => {
-        onMovieClick(movie);
-      }}
-    >
-      {movie.title}
-    </div>
+      <Card className="h-100">
+          <Card.Img variant="top" src={movie.imagePath} className="w-100" />
+          <Card.Body>
+              <Card.Title>{movie.title}</Card.Title>
+              <Card.Text>{movie.director.name}</Card.Text>
+              <Button onClick={() => onMovieClick(movie)} variant="link">
+                  Open
+              </Button>
+          </Card.Body>
+      </Card>
   );
 };
 
