@@ -1,20 +1,26 @@
 // src/components/movie-card/movie-card.jsx
 import React from 'react';
+// Here you import the PropTypes library
+import PropTypes from "prop-types";
 
-export default function MovieCard({ movie, onClick }) {
+// The BookCard function component 
+export const MovieCard = ({ movie, onMovieClick }) => {
   return (
     <div
-      onClick={onClick}
-      style={{
-        width: 200,
-        cursor: 'pointer',
-        boxShadow: '0 0 6px rgba(0,0,0,.2)',
-        borderRadius: 8,
-        overflow: 'hidden'
+      onClick={() => {
+        onMovieClick(movie);
       }}
     >
-      <img src={movie.ImagePath} alt={movie.Title} style={{ width: '100%', height: 300, objectFit: 'cover' }} />
-      <div style={{ padding: 10, fontWeight: 600, textAlign: 'center' }}>{movie.Title}</div>
+      {movie.title}
     </div>
   );
-}
+};
+
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+    title: PropTypes.string
+  }).isRequired,
+  onMovieClick: PropTypes.func.isRequired
+};
+
+
