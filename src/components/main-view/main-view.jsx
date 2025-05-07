@@ -1,7 +1,7 @@
 // src/components/main-view/main-view.jsx
 import React, { useState } from 'react';
-import MovieCard from '../movie-card/movie-card.jsx';
-import MovieView from '../movie-view/movie-view.jsx';
+import {MovieCard} from '../movie-card/movie-card.jsx';
+import {MovieView} from '../movie-view/movie-view.jsx';
 
 export default function MainView() {
   // 1 ≥ requirement: at least 3 movies
