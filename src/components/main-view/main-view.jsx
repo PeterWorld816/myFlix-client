@@ -2,20 +2,21 @@
 import React, { useState } from 'react';
 import {MovieCard} from '../movie-card/movie-card.jsx';
 import {MovieView} from '../movie-view/movie-view.jsx';
+import React, { useState, useEffect } from 'react';
 
 export default function MainView() {
   // 1 ≥ requirement: at least 3 movies
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("https://openlibrary.org/search.json?q=the+lord+of+the+rings")
+    fetch("https://pacific-chamber-62418-85c232a9b2eb.herokuapp.com/movies")
       .then((response) => response.json())
       .then((data) => {
         const moviesFromApi = data.docs.map((doc) => {
           return {
             id: doc.key,
             title: doc.title,
-            image:`https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg`,
+            image:`https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg`,
             author: doc.author_name?.[0]
           };
         });
