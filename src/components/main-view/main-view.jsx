@@ -9,6 +9,7 @@ export default function MainView() {
 
   useEffect(() => {
     fetch('https://pacific-chamber-62418-85c232a9b2eb.herokuapp.com/movies')
+    
       .then((res) => {
         if (!res.ok) throw new Error('Network response was not ok');
         return res.json();               // already an array
