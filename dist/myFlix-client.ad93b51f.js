@@ -676,6 +676,7 @@ $parcel$ReactRefreshHelpers$ca65.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css"); // <-- NEW
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
@@ -683,7 +684,7 @@ var _mainViewJsx = require("./components/main-view/main-view.jsx");
 var _mainViewJsxDefault = parcelHelpers.interopDefault(_mainViewJsx);
 (0, _client.createRoot)(document.getElementById('app')).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainViewJsxDefault.default), {}, void 0, false, {
     fileName: "src/index.jsx",
-    lineNumber: 5,
+    lineNumber: 6,
     columnNumber: 51
 }, undefined));
 
@@ -692,7 +693,7 @@ var _mainViewJsxDefault = parcelHelpers.interopDefault(_mainViewJsx);
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","./components/main-view/main-view.jsx":"etjHZ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","./components/main-view/main-view.jsx":"etjHZ","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","bootstrap/dist/css/bootstrap.min.css":"i5LP7"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -29999,6 +30000,6 @@ $RefreshReg$(_c, "MovieView");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","prop-types":"GNqOQ"}]},["hiyDA","gYcKb"], "gYcKb", "parcelRequireaec4", {}, null, null, "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","prop-types":"GNqOQ"}],"i5LP7":[function() {},{}]},["hiyDA","gYcKb"], "gYcKb", "parcelRequireaec4", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=myFlix-client.ad93b51f.js.map
